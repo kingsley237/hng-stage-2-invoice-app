@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--modal-overlay);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.body {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btnCancel {
+  padding: 16px 24px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  background: var(--btn-edit-bg);
+  color: var(--btn-edit-text);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btnCancel:hover {
+  background: var(--btn-edit-hover);
+}
+
+.btnDelete {
+  padding: 16px 24px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btnDelete:hover {
+  background: var(--red-light);
+}
+
+@media (max-width: 767px) {
+  .modal {
+    padding: 32px 24px;
+  }
+}

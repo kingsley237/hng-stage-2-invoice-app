@@ -1,0 +1,360 @@
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 72px 48px 48px;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 32px;
+  padding: 0;
+  transition: color var(--transition);
+}
+
+.backBtn:hover {
+  color: var(--text-secondary);
+}
+
+.statusBar {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.statusLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statusLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnEdit {
+  padding: 16px 24px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  background: var(--btn-edit-bg);
+  color: var(--btn-edit-text);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btnEdit:hover {
+  background: var(--btn-edit-hover);
+}
+
+.btnDelete {
+  padding: 16px 24px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btnDelete:hover {
+  background: var(--red-light);
+}
+
+.btnPaid {
+  padding: 16px 24px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  background: var(--purple);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btnPaid:hover {
+  background: var(--purple-light);
+}
+
+/* card */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.invoiceId {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.hash {
+  color: var(--muted-blue);
+}
+
+.description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+}
+
+.senderAddress {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--text-secondary);
+  letter-spacing: -0.23px;
+  gap: 2px;
+}
+
+/* meta grid */
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metaLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+}
+
+.metaValue {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+}
+
+.clientAddress {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-secondary);
+  gap: 2px;
+}
+
+/* items table */
+.itemsTable {
+  background: var(--detail-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  padding: 32px 32px 16px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: -0.23px;
+  gap: 16px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  padding: 8px 32px;
+  align-items: center;
+  gap: 16px;
+}
+
+.itemName {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+}
+
+.itemQty {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  display: none;
+}
+
+.itemQtyDesktop {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.itemPriceDesktop {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.itemTotal {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.tableFooter {
+  background: var(--table-footer-bg);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amountLabel {
+  font-size: 13px;
+  color: var(--table-footer-text);
+  letter-spacing: -0.1px;
+}
+
+.amountValue {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  color: var(--table-footer-text);
+}
+
+/* mobile actions */
+.mobileActions {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 22px 24px;
+  background: var(--bg-card);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+  .page {
+    padding: 32px 24px 120px;
+  }
+
+  .statusBar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobileActions {
+    display: flex;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .cardTop {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .senderAddress {
+    text-align: left;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .tableHeader {
+    grid-template-columns: 1fr auto;
+    padding: 24px 24px 16px;
+  }
+
+  .tableHeader span:nth-child(2),
+  .tableHeader span:nth-child(3) {
+    display: none;
+  }
+
+  .tableRow {
+    grid-template-columns: 1fr auto;
+    padding: 8px 24px;
+  }
+
+  .itemQtyDesktop,
+  .itemPriceDesktop {
+    display: none;
+  }
+
+  .itemQty {
+    display: block;
+  }
+
+  .tableFooter {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page {
+    padding: 48px 48px 48px;
+  }
+}

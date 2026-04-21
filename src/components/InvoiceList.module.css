@@ -1,0 +1,342 @@
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.headerLeft {}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 33px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* filter */
+.filterWrap {
+  position: relative;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.filterBtn:hover {
+  color: var(--text-secondary);
+}
+
+.filterLabelFull {
+  display: inline;
+}
+
+.chevronUp {
+  transform: rotate(180deg);
+}
+
+.filterDropdown {
+  position: absolute;
+  top: calc(100% + 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 24px;
+  min-width: 192px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.filterOption:hover {
+  color: var(--purple);
+}
+
+.filterCheckbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.customCheck {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-input);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.filterCheckbox:checked + .customCheck {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+.filterOptionLabel {
+  pointer-events: none;
+}
+
+/* new button */
+.newBtn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--purple);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  padding: 10px 15px 10px 6px;
+  border-radius: var(--radius-full);
+  transition: background var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.newBtn:hover {
+  background: var(--purple-light);
+}
+
+.newBtnIcon {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.newBtnFull {
+  display: inline;
+}
+
+/* invoice list */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.invoiceRow {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto auto;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: border-color var(--transition);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+
+.invoiceRow:hover {
+  border-color: var(--purple);
+}
+
+.invoiceId {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+  min-width: 72px;
+}
+
+.hash {
+  color: var(--muted-blue);
+}
+
+.invoiceDue {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+}
+
+.invoiceClient {
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+  flex: 1;
+}
+
+.invoiceAmount {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  color: var(--text-primary);
+}
+
+.invoiceStatus {}
+
+.invoiceChevron {
+  display: flex;
+  align-items: center;
+}
+
+/* empty state */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.emptyIllustration {
+  margin-bottom: 40px;
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+}
+
+.emptyTitle {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.75px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.emptyText {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--text-secondary);
+  letter-spacing: -0.1px;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+  .page {
+    padding: 32px 24px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 24px;
+    letter-spacing: -0.75px;
+  }
+
+  .headerRight {
+    gap: 18px;
+  }
+
+  .filterLabelFull {
+    display: none;
+  }
+
+  .newBtnFull {
+    display: none;
+  }
+
+  .invoiceRow {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 8px;
+    padding: 24px;
+  }
+
+  .invoiceId {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .invoiceClient {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+  }
+
+  .invoiceDue {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .invoiceAmount {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 15px;
+  }
+
+  .invoiceStatus {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .invoiceChevron {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page {
+    padding: 56px 48px;
+    margin-top: 100px;
+  }
+}
